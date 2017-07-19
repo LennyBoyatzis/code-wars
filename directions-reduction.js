@@ -21,12 +21,11 @@ console.log("test1", test1)
 
 function dirReducRegex(arr) {
   var str = arr.join('') 
-  console.log("str", str)
   var pattern = /NORTHSOUTH|EASTWEST|SOUTHNORTH|WESTEAST/
 
   while (pattern.test(str)) {
+    console.log("str", str)
     str = str.replace(pattern, '')
-    console.log("what is the string", str)
   }
 
   return str.match(/(NORTH|SOUTH|EAST|WEST)/g) || []

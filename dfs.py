@@ -45,7 +45,7 @@ def dfs_paths(graph, start, goal, path=None):
     if start == goal:
         yield path
     for next in graph[start] - set(path):
-        yield dfs_paths(graph, next, goal, path + [next])
+        yieldt dfs_paths(graph, next, goal, path + [next])
 
 if __name__ == "__main__":
     graph = {
